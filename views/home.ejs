@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p><%=HomeContent%></p>
+<% console.log(posts) %> 
+
+<% for(var i=0 ; i<posts.length ; i++){ %>
+<h1><%=   posts[i].Title    %></h1>
+<br>
+<p>
+    <%=   posts[i].Post.slice(0,100) + "..."  %>
+    <a href="/posts/:  <%=  posts[i].Title  %>">Read more</a>
+</p>
+
+<% }  %>
+
+
+<%- include("partials/footer"); -%>
+
+
+
+
